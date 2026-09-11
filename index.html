@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kopi  - Website UMKM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">UMKM Pekalongan</p>
+        <h1>Sela Coffee</h1>
+        <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
+        <button id="promoButton" type="button">Lihat promo hari ini</button>
+        <a class="scroll" href="#menu">Lihat menu ↓</a>
+      </section>
+
+      <section id="menu" class="section">
+        <div class="heading">
+          <div>
+            <p class="eyebrow dark">OUR MENU</p>
+            <h2>Temukan favoritmu.</h2>
+          </div>
+          <p class="intro">
+            Dari kopi klasik sampai minuman segar, semuanya dibuat dari bahan
+            pilihan dengan rasa yang nyaman dinikmati.
+          </p>
+        </div>
+
+        <div class="filters" aria-label="Filter menu">
+          <button class="filter active" data-category="all" type="button">Semua</button>
+          <button class="filter" data-category="coffee" type="button">Coffee</button>
+          <button class="filter" data-category="noncoffee" type="button">Non Coffee</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="card" data-category="coffee">
+            <div class="pic coffee"><span class="badge">Best Seller</span><span class="drink-icon">☕</span></div>
+            <div class="card-body"><div><h3>Kopi Tubruk</h3><p>Kopi lokal dengan aroma kuat dan rasa klasik.</p></div><b>Rp18.000</b></div>
+          </article>
+          <article class="card" data-category="coffee">
+            <div class="pic latte"><span class="drink-icon">☕</span></div>
+            <div class="card-body"><div><h3>Caffe Latte</h3><p>Espresso lembut dengan creamy milk.</p></div><b>Rp21.000</b></div>
+          </article>
+          <article class="card" data-category="coffee">
+            <div class="pic cold"><span class="badge">Favorite</span><span class="drink-icon">🧊</span></div>
+            <div class="card-body"><div><h3>Cold Brew</h3><p>Smooth, fresh, dan tidak terlalu pahit.</p></div><b>Rp22.000</b></div>
+          </article>
+          <article class="card" data-category="noncoffee">
+            <div class="pic matcha"><span class="drink-icon">🍵</span></div>
+            <div class="card-body"><div><h3>Matcha Latte</h3><p>Matcha creamy dengan rasa earthy yang lembut.</p></div><b>Rp23.000</b></div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
