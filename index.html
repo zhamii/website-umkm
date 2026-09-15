@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="page">
+    <header class="site-header">
+      <a class="brand" href="#beranda">
+        Sela Coffee
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <main id="beranda">
       <section class="hero">
         <p class="eyebrow">UMKM Pekalongan</p>
         <h1>Sela Coffee</h1>
@@ -16,11 +27,22 @@
         <a class="scroll" href="#menu">Lihat menu ↓</a>
       </section>
 
+      <section id="profil" aria-labelledby="profil-title">
+        <h2 id="profil-title">Profil Singkat</h2>
+        <img class="profile-image" src="asset/gambar/latte art.jpg" alt="Barista sedang membuat latte art" />
+        <p>Kopi Nusa mengutamakan bahan lokal dan pelayanan ramah untuk pelanggan harian.</p>
+        <ul>
+          <li>Biji kopi dipilih dari petani sekitar.</li>
+          <li>Produk dibuat dalam batch kecil.</li>
+          <li>Pemesanan tersedia melalui WhatsApp.</li>
+        </ul>
+      </section>
+
       <section id="menu" class="section">
         <div class="heading">
           <div>
             <p class="eyebrow dark">OUR MENU</p>
-            <h2>Temukan favoritmu.</h2>
+            <h3>Temukan favoritmu.</h3>
           </div>
           <p class="intro">
             Dari kopi klasik sampai minuman segar, semuanya dibuat dari bahan
@@ -36,24 +58,68 @@
 
         <div class="menu-grid">
           <article class="card" data-category="coffee">
-            <div class="pic coffee"><span class="badge">Best Seller</span><span class="drink-icon">☕</span></div>
-            <div class="card-body"><div><h3>Kopi Tubruk</h3><p>Kopi lokal dengan aroma kuat dan rasa klasik.</p></div><b>Rp18.000</b></div>
+            <div class="pic coffee"><span class="badge">Best Seller</span><img src="asset/gambar/kopi-tubruk.jpg" alt="Kopi Tubruk" loading="lazy" /></div>
+            <div class="card-body"><div><h3>Kopi Tubruk</h3><p>Kopi lokal dengan aroma kuat dan rasa klasik.</p></div><b>Rp28.000</b></div>
           </article>
           <article class="card" data-category="coffee">
-            <div class="pic latte"><span class="drink-icon">☕</span></div>
-            <div class="card-body"><div><h3>Caffe Latte</h3><p>Espresso lembut dengan creamy milk.</p></div><b>Rp21.000</b></div>
+            <div class="pic latte"><img src="asset/gambar/cafe-latte.jpg" alt="Caffe Latte" loading="lazy" /></div>
+            <div class="card-body"><div><h3>Caffe Latte</h3><p>Espresso lembut dengan creamy milk.</p></div><b>Rp35.000</b></div>
           </article>
           <article class="card" data-category="coffee">
-            <div class="pic cold"><span class="badge">Favorite</span><span class="drink-icon">🧊</span></div>
-            <div class="card-body"><div><h3>Cold Brew</h3><p>Smooth, fresh, dan tidak terlalu pahit.</p></div><b>Rp22.000</b></div>
+            <div class="pic cold"><span class="badge">Favorite</span><img src="asset/gambar/cold-brew.jpg" alt="Cold Brew" loading="lazy" /></div>
+            <div class="card-body"><div><h3>Cold Brew</h3><p>Smooth, fresh, dan tidak terlalu pahit.</p></div><b>Rp32.000</b></div>
           </article>
           <article class="card" data-category="noncoffee">
-            <div class="pic matcha"><span class="drink-icon">🍵</span></div>
-            <div class="card-body"><div><h3>Matcha Latte</h3><p>Matcha creamy dengan rasa earthy yang lembut.</p></div><b>Rp23.000</b></div>
+            <div class="pic matcha"><img src="asset/gambar/matcha-latte.jpg" alt="Matcha Latte" loading="lazy" /></div>
+            <div class="card-body"><div><h3>Matcha Latte</h3><p>Matcha creamy dengan rasa earthy yang lembut.</p></div><b>Rp38.000</b></div>
           </article>
         </div>
       </section>
+
+      <section id="kontak" class="section" aria-labelledby="kontak-title">
+        <div class="heading">s
+          <div>
+            <p class="eyebrow dark">HUBUNGI KAMI</p>
+            <h2 id="kontak-title">Kontak Singkat</h2>
+          </div>
+          <p class="intro">
+            Datang langsung, telepon, atau pesan online — kami siap melayani
+            setiap hari.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <h3>Alamat</h3>
+            <p>Jl. Kopi Nusantara No. 12, Pekalongan, Jawa Tengah</p>
+          </div>
+          <div class="contact-item">
+            <h3>Jam Layanan</h3>
+            <p>Setiap hari, pukul 08.00 - 21.00 WIB</p>
+          </div>
+          <div class="contact-item">
+            <h3>Kanal Kontak</h3>
+            <p>
+              <a href="https://wa.me/6281908686088" target="_blank" rel="noopener">
+                Pesan lewat WhatsApp Sela Coffee
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <aside class="aside-note" aria-labelledby="aside-title">
+    <h2 id="aside-title">Pertama Kali Berkunjung ke Sela?</h2>
+    <p>
+        Cobalah Sela Signature, racikan kopi pilihan yang
+        disajikan dengan penuh perhatian oleh barista kami.
+        Temukan cita rasa khas Sela dalam setiap tegukan.
+    </p>
+</aside>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Sela Coffee. Hubungi kami melalui WhatsApp: +62 819-0868-6088</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
