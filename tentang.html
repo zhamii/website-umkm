@@ -1,48 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tentang Sela Coffee - Website UMKM</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
     <a class="skip-link" href="#konten">Lewati ke konten utama</a>
     <header class="site-header">
-      <nav class="nav" aria-label="Navigasi utama">
-        <a class="brand" href="index.html">Sela Coffee</a>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a aria-current="page" href="tentang.html">Tentang Kami</a></li>
-        </ul>
-      </nav>
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="index.html">
+                <img class="brand-mark" src="asset/gambar/LogoSela.png" alt="Logo Sela Coffee" width="34" height="34" />
+                Sela Coffee
+            </a>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a aria-current="page" href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="index.html#kontak">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main id="konten" class="page">
-      <section aria-labelledby="tentang-title">
-        <p class="eyebrow">Cerita Usaha</p>
-        <h1 id="tentang-title">Tentang Sela Coffee</h1>
-        <p>
-        Sela Coffee hadir sebagai tempat untuk menikmati kopi berkualitas
-        dalam suasana yang nyaman dan tenang. Kami percaya bahwa setiap
-        cangkir kopi memiliki cerita, mulai dari pemilihan biji kopi terbaik
-        hingga proses penyajiannya oleh barista yang berpengalaman.
-        Sela berarti jeda, sebuah ruang untuk beristirahat sejenak dari
-        kesibukan, menikmati kopi, dan menemukan ketenangan dalam hal-hal
-        sederhana.
-        </p>
-        <img src="asset/gambar/suasana cafe.jpg" alt="Suasana Caffe Dari Depan Bar" />
-      </section>
-      <section aria-labelledby="nilai-title">
-        <h2 id="nilai-title">Nilai yang Kami Bawa</h2>
-        <ul>
-          <li>Bahan lokal dari petani sekitar.</li>
-          <li>Proses sederhana dan transparan.</li>
-          <li>Pelayanan ramah untuk pelanggan harian.</li>
-        </ul>
-      </section>
+        <section class="about-hero story-hero" aria-labelledby="tentang-title">
+            <div>
+                <span class="eyebrow">Cozzy Caffee</span>
+                <h1 id="tentang-title">Tentang Sela Coffee</h1>
+                <p class="about-desc">Sela Coffee adalah kafe yang tenang dengan suasana cozy. Ada buku-buku yang
+                    bisa kamu baca dan kopi lokal pilihan, cocok buat nugas, membaca, atau ngobrol santai tanpa
+                    buru-buru.</p>
+            </div>
+            <div class="about-img-wrapper">
+                <img src="asset/gambar/foto seduh.jpg" alt="Barista Sela Coffee sedang membuat v60"
+                    class="about-img" />
+            </div>
+        </section>
+
+        <section class="section values-section" aria-labelledby="nilai-title">
+            <div class="section-head">
+                <h2 id="nilai-title">Nilai yang Kami Bawa</h2>
+                <p>Tiga hal yang selalu kami jaga di setiap gelas yang kami sajikan.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                        aria-hidden="true">
+                        <ellipse cx="12" cy="12" rx="5" ry="8" transform="rotate(45 12 12)" />
+                        <path d="M8 16c2.5-1 2-3 4-4s1.5-2.5 4-4" />
+                    </svg>
+                    <h3>Bahan Lokal</h3>
+                    <p>Biji kopi kami dipilih dari petani sekitar, karena bahan lokal selalu jadi prioritas.</p>
+                </div>
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                        aria-hidden="true">
+                        <path d="M5 11h11v4a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-4Z" />
+                        <path d="M16 12h1.5a2.5 2.5 0 0 1 0 5H16" />
+                        <path d="M8.5 4c-1 1 1 2 0 3M12.5 4c-1 1 1 2 0 3" />
+                    </svg>
+                    <h3>Dibuat Batch Kecil</h3>
+                    <p>Produk diracik dalam jumlah kecil supaya rasa dan kesegarannya tetap terjaga.</p>
+                </div>
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                        aria-hidden="true">
+                        <path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7l-4.5 3.5V17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+                        <path d="M9 10.5c1.5 2 4.5 2 6 0" />
+                        <circle cx="9.5" cy="8" r=".6" fill="currentColor" />
+                        <circle cx="14.5" cy="8" r=".6" fill="currentColor" />
+                    </svg>
+                    <h3>Pelayanan Ramah</h3>
+                    <p>Kami melayani pelanggan harian dengan hangat, langsung di kedai atau lewat WhatsApp.</p>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="site-footer">
-      <p>&copy; 2026 Sela Coffee. Data pada halaman ini bersifat dummy.</p>
+        <p>&copy; 2026 Sela Coffee. Hubungi kami melalui WhatsApp: +62 819-0868-6088</p>
     </footer>
-  </body>
+
+    <script src="js/script.js"></script>
+</body>
+
 </html>

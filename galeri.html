@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galeri Sela Coffee - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="asset/gambar/LogoSela.png" alt="Logo Sela Coffee" width="34" height="34" />
+          Sela Coffee
+        </a>
+        <ul class="nav-list">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a class="active" aria-current="page" href="galeri.html">Galeri</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten" class="page">
+      <section class="about-hero gallery-hero" aria-labelledby="galeri-hero-title">
+        <div class="about-copy">
+          <span class="eyebrow">Cozzy Cafe Sela</span>
+          <h1 id="galeri-hero-title">Galeri Sela Coffee</h1>
+          <p class="about-desc">
+            Sekilas suasana kedai, proses seduh, dan orang-orang di balik setiap cangkir Sela Coffee.
+          </p>
+        </div>
+        <div class="about-img-wrapper">
+          <img src="asset/gambar/foto rak.jpg" alt="Rak buku dengan potret aesthetic di sudut kedai Sela Coffee" class="about-img" />
+        </div>
+      </section>
+
+      <section class="section gallery-section" aria-labelledby="suasana-title">
+        <div class="section-head">
+          <h2 id="suasana-title">Suasana Kedai</h2>
+          <p>Sudut-sudut Sela Coffee yang nyaman untuk nongkrong, belajar, dan berdiskusi.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="media-card">
+            <img src="asset/gambar/hiasann dinding.jpg" alt="Hiasan dinding di area duduk Sela Coffee" />
+            <figcaption>Detail interior yang bikin betah, jadi bagian dari cerita ruang kami.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="asset/gambar/suasana1.jpg" alt="Suasana interior kedai Sela Coffee dengan meja kayu dan pencahayaan hangat" />
+            <figcaption>Meja kayu dan pencahayaan hangat, cocok untuk kerja santai maupun ngobrol lama.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section gallery-section" aria-labelledby="proses-title">
+        <div class="section-head">
+          <h2 id="proses-title">Proses Seduh</h2>
+          <p>Setiap cangkir diseduh dengan perhatian pada detail.</p>
+        </div>
+        <div class="gallery-grid single-feature">
+          <figure class="media-card">
+            <img src="asset/gambar/foto seduh.jpg" alt="Barista menuang air panas ke dripper kopi" />
+            <figcaption>Seduh manual menjadi bagian dari cerita di balik setiap gelas Sela Coffee.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section gallery-section" aria-labelledby="tim-title">
+        <div class="section-head">
+          <h2 id="tim-title">Tim Kami</h2>
+          <p>Orang-orang yang menyapa kamu setiap hari di Sela Coffee.</p>
+        </div>
+        <div class="gallery-grid single-feature">
+          <figure class="media-card">
+            <img src="asset/gambar/crew.jpg" alt="Tim barista dan staf Sela Coffee berfoto bersama di depan kedai" />
+            <figcaption>Tim Sela Coffee yang siap melayani dengan ramah setiap hari.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section gallery-section media-section" aria-labelledby="video-title">
+        <div class="section-head">
+          <h2 id="video-title">Video Profil Kedai</h2>
+        </div>
+        <div class="video-wrap">
+          <video controls poster="asset/gambar/crew.jpg" aria-describedby="video-note">
+            <source src="asset/video/sela-video.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutar video. Silakan unduh video profil kedai melalui tautan WhatsApp kami.
+          </video>
+          <p id="video-note" class="video-caption">Kenali lebih dekat Sela Coffee lewat video profil kedai kami.</p>
+        </div>
+      </section>
+
+      <section class="section gallery-section media-section" aria-labelledby="audio-title">
+        <div class="section-head">
+          <h2 id="audio-title">Nada Penanda Kedai</h2>
+        </div>
+        <div class="video-wrap">
+          <p id="audio-note" class="video-caption audio-caption">
+            Nada singkat ini memastikan setiap elemen audio dan kontrol pemutar dapat dinikmati dengan baik.
+          </p>
+          <audio controls aria-describedby="audio-note" class="audio-player" src="asset/audio/sela-coffee.mp3">
+            Browser Anda tidak mendukung pemutar audio.
+          </audio>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Sela Coffee. Data pada halaman ini bersifat dummy.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

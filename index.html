@@ -3,28 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kopi  - Website UMKM</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Sela Coffee - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#beranda">Lewati ke konten utama</a>
     <header class="site-header">
-      <a class="brand" href="#beranda">
-        Sela Coffee
-      </a>
-      <nav aria-label="Navigasi utama">
-        <a href="#beranda">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="#kontak">Kontak</a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="asset/gambar/LogoSela.png" alt="Logo Sela Coffee" width="34" height="34" />
+          Sela Coffee
+        </a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
       </nav>
     </header>
 
     <main id="beranda">
       <section class="hero">
-        <p class="eyebrow">UMKM Pekalongan</p>
+        <p class="eyebrow">Cozzy Caffe</p>
         <h1>Sela Coffee</h1>
         <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
         <button id="promoButton" type="button">Lihat promo hari ini</button>
-        <a class="scroll" href="#menu">Lihat menu ↓</a>
+        <div class="about-img-wrapper">
+          <img src="asset/gambar/foto depan.jpg" alt="Foto Sela Coffee tampak depan" class="about-img" />
+        </div>
       </section>
 
       <section id="profil" aria-labelledby="profil-title">
@@ -107,19 +115,20 @@
           </div>
         </div>
       </section>
+
       <aside class="aside-note" aria-labelledby="aside-title">
-    <h2 id="aside-title">Pertama Kali Berkunjung ke Sela?</h2>
-    <p>
-        Cobalah Sela Signature, racikan kopi pilihan yang
-        disajikan dengan penuh perhatian oleh barista kami.
-        Temukan cita rasa khas Sela dalam setiap tegukan.
-    </p>
-</aside>
+        <h2 id="aside-title">Pertama Kali Berkunjung ke Sela?</h2>
+        <p>
+          Cobalah Sela Signature, racikan kopi pilihan yang
+          disajikan dengan penuh perhatian oleh barista kami.
+          Temukan cita rasa khas Sela dalam setiap tegukan.
+        </p>
+      </aside>
     </main>
 
     <footer class="site-footer">
       <p>&copy; 2026 Sela Coffee. Hubungi kami melalui WhatsApp: +62 819-0868-6088</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
