@@ -14,7 +14,7 @@
           <img class="brand-mark" src="asset/gambar/LogoSela.png" alt="Logo Sela Coffee" width="34" height="34" />
           Sela Coffee
         </a>
-        <ul>
+        <ul class="nav-list">
           <li><a aria-current="page" href="index.html">Beranda</a></li>
           <li><a href="tentang.html">Tentang Kami</a></li>
           <li><a href="produk.html">Produk</a></li>
@@ -25,12 +25,14 @@
     </header>
 
     <main id="beranda">
-      <section class="hero">
-        <p class="eyebrow">Cozzy Caffe</p>
-        <h1>Sela Coffee</h1>
-        <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
-        <button id="promoButton" type="button">Lihat promo hari ini</button>
-        <div class="about-img-wrapper">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Cozzy Caffe</p>
+          <h1 id="hero-title">Sela Coffee</h1>
+          <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
+          <button id="promoButton" type="button">Lihat promo hari ini</button>
+        </div>
+        <div class="hero-image">
           <img src="asset/gambar/foto depan.jpg" alt="Foto Sela Coffee tampak depan" class="about-img" />
         </div>
       </section>
@@ -46,11 +48,11 @@
         </ul>
       </section>
 
-      <section id="menu" class="section">
+      <section id="menu" class="section" aria-labelledby="menu-title">
         <div class="heading">
           <div>
             <p class="eyebrow dark">OUR MENU</p>
-            <h3>Temukan favoritmu.</h3>
+            <h2 id="menu-title">Temukan favoritmu.</h2>
           </div>
           <p class="intro">
             Dari kopi klasik sampai minuman segar, semuanya dibuat dari bahan
@@ -64,22 +66,48 @@
           <button class="filter" data-category="noncoffee" type="button">Non Coffee</button>
         </div>
 
-        <div class="menu-grid">
-          <article class="card" data-category="coffee">
-            <div class="pic coffee"><span class="badge">Best Seller</span><img src="asset/gambar/kopi-tubruk.jpg" alt="Kopi Tubruk" loading="lazy" /></div>
-            <div class="card-body"><div><h3>Kopi Tubruk</h3><p>Kopi lokal dengan aroma kuat dan rasa klasik.</p></div><b>Rp28.000</b></div>
+        <div class="product-grid">
+          <article class="card product-card" data-category="coffee">
+            <div class="pic"><img src="asset/gambar/kopi-tubruk.jpg" alt="Kopi Tubruk" loading="lazy" /></div>
+            <span class="product-badge">Best Seller</span>
+            <div class="card-body">
+              <div class="card-info"><h3>Kopi Tubruk</h3><p>Kopi lokal dengan aroma kuat dan rasa klasik.</p></div>
+              <div class="card-actions">
+                <span class="price">Rp28.000</span>
+                <a class="card-link" href="https://wa.me/6281908686088" target="_blank" rel="noopener" aria-label="Pesan Kopi Tubruk lewat WhatsApp">Pesan</a>
+              </div>
+            </div>
           </article>
-          <article class="card" data-category="coffee">
-            <div class="pic latte"><img src="asset/gambar/cafe-latte.jpg" alt="Caffe Latte" loading="lazy" /></div>
-            <div class="card-body"><div><h3>Caffe Latte</h3><p>Espresso lembut dengan creamy milk.</p></div><b>Rp35.000</b></div>
+          <article class="card product-card" data-category="coffee">
+            <div class="pic"><img src="asset/gambar/cafe-latte.jpg" alt="Caffe Latte" loading="lazy" /></div>
+            <div class="card-body">
+              <div class="card-info"><h3>Caffe Latte</h3><p>Espresso lembut dengan creamy milk.</p></div>
+              <div class="card-actions">
+                <span class="price">Rp35.000</span>
+                <a class="card-link" href="https://wa.me/6281908686088" target="_blank" rel="noopener" aria-label="Pesan Caffe Latte lewat WhatsApp">Pesan</a>
+              </div>
+            </div>
           </article>
-          <article class="card" data-category="coffee">
-            <div class="pic cold"><span class="badge">Favorite</span><img src="asset/gambar/cold-brew.jpg" alt="Cold Brew" loading="lazy" /></div>
-            <div class="card-body"><div><h3>Cold Brew</h3><p>Smooth, fresh, dan tidak terlalu pahit.</p></div><b>Rp32.000</b></div>
+          <article class="card product-card" data-category="coffee">
+            <div class="pic"><img src="asset/gambar/cold-brew.jpg" alt="Cold Brew" loading="lazy" /></div>
+            <span class="product-badge">Favorite</span>
+            <div class="card-body">
+              <div class="card-info"><h3>Cold Brew</h3><p>Smooth, fresh, dan tidak terlalu pahit.</p></div>
+              <div class="card-actions">
+                <span class="price">Rp32.000</span>
+                <a class="card-link" href="https://wa.me/6281908686088" target="_blank" rel="noopener" aria-label="Pesan Cold Brew lewat WhatsApp">Pesan</a>
+              </div>
+            </div>
           </article>
-          <article class="card" data-category="noncoffee">
-            <div class="pic matcha"><img src="asset/gambar/matcha-latte.jpg" alt="Matcha Latte" loading="lazy" /></div>
-            <div class="card-body"><div><h3>Matcha Latte</h3><p>Matcha creamy dengan rasa earthy yang lembut.</p></div><b>Rp38.000</b></div>
+          <article class="card product-card" data-category="noncoffee">
+            <div class="pic"><img src="asset/gambar/matcha-latte.jpg" alt="Matcha Latte" loading="lazy" /></div>
+            <div class="card-body">
+              <div class="card-info"><h3>Matcha Latte</h3><p>Matcha creamy dengan rasa earthy yang lembut.</p></div>
+              <div class="card-actions">
+                <span class="price">Rp38.000</span>
+                <a class="card-link" href="https://wa.me/6281908686088" target="_blank" rel="noopener" aria-label="Pesan Matcha Latte lewat WhatsApp">Pesan</a>
+              </div>
+            </div>
           </article>
         </div>
       </section>
