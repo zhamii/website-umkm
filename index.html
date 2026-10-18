@@ -11,7 +11,7 @@
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
         <a class="brand" href="index.html">
-          <img class="brand-mark" src="asset/gambar/LogoSela.png" alt="Logo Sela Coffee" width="34" height="34" />
+          <img class="brand-mark" src="asset/gambar/LogoSela.png" srcset="asset/gambar/responsive/logo-96w.png 96w, asset/gambar/responsive/logo-192w.png 192w" sizes="38px" alt="Logo Sela Coffee" width="2700" height="2700" loading="lazy" />
           Sela Coffee
         </a>
         <ul class="nav-list">
@@ -33,13 +33,13 @@
           <button id="promoButton" type="button">Lihat promo hari ini</button>
         </div>
         <div class="hero-image">
-          <img src="asset/gambar/foto depan.jpg" alt="Foto Sela Coffee tampak depan" class="about-img" />
+          <img src="asset/gambar/foto depan.jpg" srcset="asset/gambar/responsive/foto-depan-640w.jpg 640w, asset/gambar/foto%20depan.jpg 1407w" sizes="(min-width: 48rem) 45vw, 90vw" width="1407" height="768" alt="Foto Sela Coffee tampak depan" class="about-img" />
         </div>
       </section>
 
       <section id="profil" aria-labelledby="profil-title">
         <h2 id="profil-title">Profil Singkat</h2>
-        <img class="profile-image" src="asset/gambar/latte art.jpg" alt="Barista sedang membuat latte art" />
+        <img class="profile-image" src="asset/gambar/latte art.jpg" srcset="asset/gambar/responsive/latte-art-640w.jpg 640w, asset/gambar/latte%20art.jpg 1024w" sizes="(min-width: 48rem) 45vw, 90vw" width="1024" height="683" alt="Barista sedang membuat latte art" loading="lazy" />
         <p>Sela Coffee mengutamakan bahan lokal dan pelayanan ramah untuk pelanggan harian.</p>
         <ul>
           <li>Biji kopi dipilih dari petani sekitar.</li>
@@ -60,15 +60,16 @@
           </p>
         </div>
 
-        <div class="filters" aria-label="Filter menu">
-          <button class="filter active" data-category="all" type="button">Semua</button>
-          <button class="filter" data-category="coffee" type="button">Coffee</button>
-          <button class="filter" data-category="noncoffee" type="button">Non Coffee</button>
+        <div class="filters" role="group" aria-label="Filter menu">
+          <button class="filter active" data-category="all" type="button" aria-pressed="true">Semua</button>
+          <button class="filter" data-category="coffee" type="button" aria-pressed="false">Coffee</button>
+          <button class="filter" data-category="noncoffee" type="button" aria-pressed="false">Non Coffee</button>
         </div>
+        <p id="menu-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></p>
 
         <div class="product-grid">
           <article class="card product-card" data-category="coffee">
-            <div class="pic"><img src="asset/gambar/kopi-tubruk.jpg" alt="Kopi Tubruk" loading="lazy" /></div>
+            <div class="pic"><img src="asset/gambar/kopi-tubruk.jpg" srcset="asset/gambar/responsive/kopi-tubruk-640w.jpg 640w, asset/gambar/kopi-tubruk.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Kopi Tubruk" loading="lazy" /></div>
             <span class="product-badge">Best Seller</span>
             <div class="card-body">
               <div class="card-info"><h3>Kopi Tubruk</h3><p>Kopi lokal dengan aroma kuat dan rasa klasik.</p></div>
@@ -79,7 +80,7 @@
             </div>
           </article>
           <article class="card product-card" data-category="coffee">
-            <div class="pic"><img src="asset/gambar/cafe-latte.jpg" alt="Caffe Latte" loading="lazy" /></div>
+            <div class="pic"><img src="asset/gambar/cafe-latte.jpg" srcset="asset/gambar/responsive/cafe-latte-640w.jpg 640w, asset/gambar/cafe-latte.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Caffe Latte" loading="lazy" /></div>
             <div class="card-body">
               <div class="card-info"><h3>Caffe Latte</h3><p>Espresso lembut dengan creamy milk.</p></div>
               <div class="card-actions">
@@ -89,7 +90,7 @@
             </div>
           </article>
           <article class="card product-card" data-category="coffee">
-            <div class="pic"><img src="asset/gambar/cold-brew.jpg" alt="Cold Brew" loading="lazy" /></div>
+            <div class="pic"><img src="asset/gambar/cold-brew.jpg" srcset="asset/gambar/responsive/cold-brew-640w.jpg 640w, asset/gambar/cold-brew.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Cold Brew" loading="lazy" /></div>
             <span class="product-badge">Favorite</span>
             <div class="card-body">
               <div class="card-info"><h3>Cold Brew</h3><p>Smooth, fresh, dan tidak terlalu pahit.</p></div>
@@ -100,7 +101,7 @@
             </div>
           </article>
           <article class="card product-card" data-category="noncoffee">
-            <div class="pic"><img src="asset/gambar/matcha-latte.jpg" alt="Matcha Latte" loading="lazy" /></div>
+            <div class="pic"><img src="asset/gambar/matcha-latte.jpg" srcset="asset/gambar/responsive/matcha-latte-640w.jpg 640w, asset/gambar/matcha-latte.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Matcha Latte" loading="lazy" /></div>
             <div class="card-body">
               <div class="card-info"><h3>Matcha Latte</h3><p>Matcha creamy dengan rasa earthy yang lembut.</p></div>
               <div class="card-actions">

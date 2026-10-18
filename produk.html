@@ -13,7 +13,7 @@
     <header class="site-header">
         <nav class="nav" aria-label="Navigasi utama">
             <a class="brand" href="index.html">
-                <img class="brand-mark" src="asset/gambar/LogoSela.png" alt="Logo Sela Coffee" width="34" height="34" />
+                <img class="brand-mark" src="asset/gambar/LogoSela.png" srcset="asset/gambar/responsive/logo-96w.png 96w, asset/gambar/responsive/logo-192w.png 192w" sizes="38px" alt="Logo Sela Coffee" width="2700" height="2700" loading="lazy" />
                 Sela Coffee
             </a>
             <ul class="nav-list">
@@ -34,7 +34,7 @@
                 <p>Dari kopi tubruk yang klasik sampai matcha latte yang creamy, semuanya diracik dari bahan pilihan.</p>
             </div>
             <div class="hero-image">
-                <img src="asset/gambar/produk.jpg" alt="Pilihan menu kopi dan minuman Sela Coffee" class="about-img" />
+                <img src="asset/gambar/produk.jpg" srcset="asset/gambar/responsive/produk-640w.jpg 640w, asset/gambar/produk.jpg 1407w" sizes="(min-width: 48rem) 45vw, 90vw" width="1407" height="768" alt="Pilihan menu kopi dan minuman Sela Coffee" class="about-img" />
             </div>
         </section>
 
@@ -48,14 +48,14 @@
             </div>
             <div class="category-cards" aria-label="Kategori menu">
                 <figure class="category-card">
-                    <img src="asset/gambar/cafe-latte.jpg" alt="Cangkir kopi untuk kategori Coffee" loading="lazy" />
+                    <img src="asset/gambar/cafe-latte.jpg" srcset="asset/gambar/responsive/cafe-latte-640w.jpg 640w, asset/gambar/cafe-latte.jpg 1008w" sizes="(min-width: 60rem) 18vw, (min-width: 48rem) 20vw, (min-width: 42rem) 43vw, 90vw" width="1008" height="1046" alt="Cangkir kopi untuk kategori Coffee" loading="lazy" />
                     <figcaption>
                         <h3>Coffee</h3>
                         <p>Kopi lokal dari yang klasik sampai cold brew.</p>
                     </figcaption>
                 </figure>
                 <figure class="category-card">
-                    <img src="asset/gambar/matcha-latte.jpg" alt="Matcha latte untuk kategori Non Coffee" loading="lazy" />
+                    <img src="asset/gambar/matcha-latte.jpg" srcset="asset/gambar/responsive/matcha-latte-640w.jpg 640w, asset/gambar/matcha-latte.jpg 1008w" sizes="(min-width: 60rem) 18vw, (min-width: 48rem) 20vw, (min-width: 42rem) 43vw, 90vw" width="1008" height="1046" alt="Matcha latte untuk kategori Non Coffee" loading="lazy" />
                     <figcaption>
                         <h3>Non Coffee</h3>
                         <p>Minuman creamy dan segar tanpa kopi.</p>
@@ -81,7 +81,7 @@
             </div>
             <div class="product-grid">
                 <figure class="product-card">
-                    <img src="asset/gambar/kopi-tubruk.jpg" alt="Kopi Tubruk" class="product-img" loading="lazy" />
+                    <img src="asset/gambar/kopi-tubruk.jpg" srcset="asset/gambar/responsive/kopi-tubruk-640w.jpg 640w, asset/gambar/kopi-tubruk.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Kopi Tubruk" class="product-img" loading="lazy" />
                     <span class="product-badge">Best Seller</span>
                     <figcaption>
                         <div class="product-header">
@@ -95,7 +95,7 @@
                     </figcaption>
                 </figure>
                 <figure class="product-card">
-                    <img src="asset/gambar/cafe-latte.jpg" alt="Caffe Latte" class="product-img" loading="lazy" />
+                    <img src="asset/gambar/cafe-latte.jpg" srcset="asset/gambar/responsive/cafe-latte-640w.jpg 640w, asset/gambar/cafe-latte.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Caffe Latte" class="product-img" loading="lazy" />
                     <figcaption>
                         <div class="product-header">
                             <h3>Caffe Latte</h3>
@@ -108,7 +108,7 @@
                     </figcaption>
                 </figure>
                 <figure class="product-card">
-                    <img src="asset/gambar/cold-brew.jpg" alt="Cold Brew" class="product-img" loading="lazy" />
+                    <img src="asset/gambar/cold-brew.jpg" srcset="asset/gambar/responsive/cold-brew-640w.jpg 640w, asset/gambar/cold-brew.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Cold Brew" class="product-img" loading="lazy" />
                     <span class="product-badge">Favorite</span>
                     <figcaption>
                         <div class="product-header">
@@ -122,7 +122,7 @@
                     </figcaption>
                 </figure>
                 <figure class="product-card">
-                    <img src="asset/gambar/matcha-latte.jpg" alt="Matcha Latte" class="product-img" loading="lazy" />
+                    <img src="asset/gambar/matcha-latte.jpg" srcset="asset/gambar/responsive/matcha-latte-640w.jpg 640w, asset/gambar/matcha-latte.jpg 1008w" sizes="(min-width: 60rem) 30vw, (min-width: 48rem) 45vw, 90vw" width="1008" height="1046" alt="Matcha Latte" class="product-img" loading="lazy" />
                     <figcaption>
                         <div class="product-header">
                             <h3>Matcha Latte</h3>
@@ -142,9 +142,9 @@
                 <h2 id="harga-title">Daftar Harga</h2>
                 <p>Harga menu Sela Coffee per gelas.</p>
             </div>
-            <div class="price-table-wrap">
+            <div class="table-scroll price-table-wrap" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
                 <table>
-                    <caption>Daftar harga menu Sela Coffee</caption>
+                    <caption id="daftar-harga-caption">Daftar harga produk Sela Coffee</caption>
                     <thead>
                         <tr>
                             <th scope="col">Produk</th>

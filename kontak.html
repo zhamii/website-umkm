@@ -18,9 +18,12 @@
         <img
           class="brand-mark"
           src="asset/gambar/LogoSela.png"
+          srcset="asset/gambar/responsive/logo-96w.png 96w, asset/gambar/responsive/logo-192w.png 192w"
+          sizes="38px"
           alt="Logo Sela Coffee"
-          width="34"
-          height="34"
+          width="2700"
+          height="2700"
+          loading="lazy"
         />
         Sela Coffee
       </a>
@@ -55,6 +58,10 @@
       <div class="about-img-wrapper">
         <img
           src="asset/gambar/foto seduh.jpg"
+          srcset="asset/gambar/responsive/foto-seduh-640w.jpg 640w, asset/gambar/foto%20seduh.jpg 1407w"
+          sizes="(min-width: 48rem) 45vw, 90vw"
+          width="1407"
+          height="768"
           alt="Foto barista sedang menyeduh kopi"
           class="about-img"
         />
@@ -342,7 +349,7 @@
           <div class="side-card">
             <h3 id="preview-title">Preview Data</h3>
 
-            <pre id="preview-form" aria-live="polite">Data form akan muncul setelah tombol "Kirim Pesan" diklik.</pre>
+            <pre id="preview-form" aria-labelledby="preview-title" aria-live="polite" aria-atomic="true">Data form akan muncul setelah tombol "Kirim Pesan" diklik.</pre>
           </div>
 
         </aside>
