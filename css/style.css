@@ -141,6 +141,13 @@ button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(232,185,
   background: #fee2e2;
   color: #991b1b;
 }
+.filter-bar { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-block: var(--space-4) var(--space-5); }
+.filter-button { color: var(--color-muted); background: var(--color-surface); border: 1px solid var(--color-border); }
+.filter-button:hover, .filter-button:focus-visible { color: var(--color-primary); border-color: var(--color-primary); box-shadow: none; }
+.filter-button.is-active { color: #fff; background: var(--color-primary); border-color: var(--color-primary); }
+.empty-state { grid-column: 1 / -1; margin: 0; padding: var(--space-4); color: var(--color-muted); background: var(--color-surface); border: 1px dashed var(--color-muted); border-radius: var(--radius-lg); font: .9rem/1.5 var(--font-body); }
+.ghost-button { display: block; margin-top: var(--space-3); padding: var(--space-2) var(--space-3); color: var(--color-muted); background: transparent; border: 1px solid var(--color-border); font-size: .78rem; }
+.ghost-button:hover { color: #fff; background: var(--color-primary); box-shadow: none; }
 .value-item, .contact-item { padding: var(--space-5); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
 .value-icon { width: 40px; height: 40px; margin-bottom: var(--space-4); color: var(--color-accent); }
 .value-item h3, .contact-item h3 { margin: 0 0 var(--space-2); color: var(--color-primary); font-size: 1.15rem; }

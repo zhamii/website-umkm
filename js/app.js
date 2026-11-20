@@ -7,6 +7,8 @@ const produkUmkm = [
   { nama: "Caffe Latte", kategori: "Coffee", harga: 35000, stok: 4, unggulan: false, diskonPersen: 0, deskripsi: "Espresso lembut dengan creamy milk." },
   { nama: "Cold Brew", kategori: "Coffee", harga: 32000, stok: 14, unggulan: true, diskonPersen: 0, deskripsi: "Smooth, fresh, dan tidak terlalu pahit." },
   { nama: "Matcha Latte", kategori: "Non Coffee", harga: 38000, stok: 0, unggulan: false, diskonPersen: 0, deskripsi: "Matcha creamy dengan rasa earthy yang lembut." },
+  { nama: "Roti Bakar Cokelat", kategori: "Makanan", harga: 18000, stok: 20, unggulan: false, diskonPersen: 0, deskripsi: "Roti bakar hangat dengan lelehan cokelat." },
+  { nama: "Kentang Goreng", kategori: "Makanan", harga: 20000, stok: 3, unggulan: false, diskonPersen: 0, deskripsi: "Kentang goreng renyah, teman nongkrong yang pas." },
 ];
 
 // Input: angka. Output: teks rupiah. Tidak mengubah DOM.
@@ -45,24 +47,79 @@ function hitungHargaAkhir(harga, diskonPersen) {
   return Math.round(harga - (harga * diskonPersen) / 100);
 }
 
-function buatKartuProduk(produk) {
+// Selector DOM. Script ini dimuat di semua halaman, jadi hasilnya bisa null.
+const produkGrid = document.querySelector("#produk-dinamis");
+const produkStatus = document.querySelector("#produk-ringkasan");
+const produkUnggulanInfo = document.querySelector("#produk-unggulan");
+const tombolFilter = document.querySelectorAll("[data-filter]");
+
+// Input: satu object produk. Output: satu elemen DOM kartu (belum dimasukkan ke halaman).
+function buatElemenProduk(produk) {
   const status = statusStok(produk.stok);
   const hargaAkhir = hitungHargaAkhir(produk.harga, produk.diskonPersen);
   const adaDiskon = hargaAkhir < produk.harga;
-  const blokHarga = adaDiskon
-    ? `<p class="price"><s class="price-old">${formatRupiah(produk.harga)}</s> <span class="discount-badge">-${produk.diskonPersen}%</span></p>
-       <p class="price">${formatRupiah(hargaAkhir)}</p>`
-    : `<p class="price">${formatRupiah(produk.harga)}</p>`;
 
-  return `
-    <article class="js-product-card">
-      <h3>${produk.nama}</h3>
-      <p class="category-note">${produk.kategori}</p>
-      <p>${produk.deskripsi}</p>
-      ${blokHarga}
-      <span class="stock-badge ${status.className}">${status.label}</span>
-    </article>
-  `;
+  const card = document.createElement("article");
+  card.classList.add("js-product-card");
+
+  const title = document.createElement("h3");
+  title.textContent = produk.nama;
+
+  const category = document.createElement("p");
+  category.classList.add("category-note");
+  category.textContent = produk.kategori;
+
+  const desc = document.createElement("p");
+  desc.textContent = produk.deskripsi;
+
+  card.append(title, category, desc);
+
+  if (adaDiskon) {
+    const hargaCoret = document.createElement("p");
+    hargaCoret.classList.add("price");
+
+    const hargaLama = document.createElement("s");
+    hargaLama.classList.add("price-old");
+    hargaLama.textContent = formatRupiah(produk.harga);
+
+    const diskon = document.createElement("span");
+    diskon.classList.add("discount-badge");
+    diskon.textContent = `-${produk.diskonPersen}%`;
+
+    hargaCoret.append(hargaLama, " ", diskon);
+    card.append(hargaCoret);
+  }
+
+  const price = document.createElement("p");
+  price.classList.add("price");
+  price.textContent = formatRupiah(hargaAkhir);
+
+  const stock = document.createElement("span");
+  stock.classList.add("stock-badge");
+  if (status.className) {
+    stock.classList.add(status.className);
+  }
+  stock.textContent = status.label;
+
+  // Latihan remove(): hanya menghapus kartu dari tampilan, data produkUmkm tidak berubah.
+  const removeButton = document.createElement("button");
+  removeButton.type = "button";
+  removeButton.classList.add("ghost-button");
+  removeButton.textContent = "Sembunyikan";
+  removeButton.addEventListener("click", () => {
+    card.remove();
+    produkStatus.textContent = "Satu kartu disembunyikan dari tampilan. Data asli belum berubah.";
+  });
+
+  card.append(price, stock, removeButton);
+  return card;
+}
+
+function buatEmptyState(kategori) {
+  const empty = document.createElement("p");
+  empty.classList.add("empty-state");
+  empty.textContent = `Belum ada produk pada kategori ${kategori}.`;
+  return empty;
 }
 
 function ringkasKategori(daftarProduk) {
@@ -77,32 +134,59 @@ function ringkasKategori(daftarProduk) {
     .join(", ");
 }
 
-function renderProduk() {
-  const grid = document.querySelector("#produk-dinamis");
-  const ringkasan = document.querySelector("#produk-ringkasan");
-  const unggulan = document.querySelector("#produk-unggulan");
-
+function renderProduk(kategoriAktif = "Semua") {
   // Bukan halaman produk: tidak ada yang perlu dirender.
-  if (!grid || !ringkasan || !unggulan) {
+  if (!produkGrid || !produkStatus || !produkUnggulanInfo) {
     return;
   }
 
-  produkUmkm.forEach((produk) => {
-    console.log("Debug produk:", produk.nama, "stok:", produk.stok);
-  });
-  console.table(produkUmkm);
-
-  const produkTersedia = produkUmkm.filter((produk) => produk.stok > 0);
+  const produkTampil =
+    kategoriAktif === "Semua"
+      ? produkUmkm
+      : produkUmkm.filter((produk) => produk.kategori === kategoriAktif);
   const produkUnggulan = produkUmkm.find((produk) => produk.unggulan === true);
-  const markupProduk = produkTersedia.map(buatKartuProduk).join("");
 
-  console.log("Jumlah produk tersedia:", produkTersedia.length);
+  console.log("Render kategori:", kategoriAktif);
+  console.table(produkTampil);
 
-  grid.innerHTML = markupProduk;
-  ringkasan.textContent = `${produkTersedia.length} produk tersedia dari ${produkUmkm.length} data. (${ringkasKategori(produkUmkm)})`;
-  unggulan.textContent = produkUnggulan
+  // Kosongkan hasil render lama agar kartu tidak dobel.
+  produkGrid.replaceChildren();
+
+  produkUnggulanInfo.textContent = produkUnggulan
     ? `Produk unggulan: ${produkUnggulan.nama}`
     : "Belum ada produk unggulan.";
+
+  if (produkTampil.length === 0) {
+    produkGrid.append(buatEmptyState(kategoriAktif));
+    produkStatus.textContent = `Kategori ${kategoriAktif} menampilkan 0 produk dari ${produkUmkm.length} total produk.`;
+    return;
+  }
+
+  produkTampil.forEach((produk) => {
+    produkGrid.append(buatElemenProduk(produk));
+  });
+
+  produkStatus.textContent =
+    kategoriAktif === "Semua"
+      ? `${produkTampil.length} produk ditampilkan. (${ringkasKategori(produkUmkm)})`
+      : `Kategori ${kategoriAktif} menampilkan ${produkTampil.length} produk dari ${produkUmkm.length} total produk.`;
 }
 
-document.addEventListener("DOMContentLoaded", renderProduk);
+tombolFilter.forEach((tombol) => {
+  tombol.addEventListener("click", (event) => {
+    const tombolAktif = event.currentTarget;
+    const kategori = tombolAktif.dataset.filter;
+
+    tombolFilter.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-pressed", "false");
+    });
+    tombolAktif.classList.add("is-active");
+    tombolAktif.setAttribute("aria-pressed", "true");
+
+    renderProduk(kategori);
+  });
+});
+
+// app.js dimuat dengan defer, jadi DOM sudah siap saat baris ini jalan.
+renderProduk();

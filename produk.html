@@ -145,8 +145,16 @@
             <div class="section-head">
                 <p class="eyebrow">Data JavaScript</p>
                 <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
-                <p id="produk-ringkasan">Data produk akan dimuat melalui JavaScript.</p>
+                <p id="produk-ringkasan" aria-live="polite">Data produk akan dimuat melalui JavaScript.</p>
                 <p id="produk-unggulan"></p>
+            </div>
+            <div class="filter-bar" role="group" aria-label="Filter kategori produk">
+                <button type="button" class="filter-button is-active" data-filter="Semua" aria-pressed="true">Semua</button>
+                <button type="button" class="filter-button" data-filter="Coffee" aria-pressed="false">Coffee</button>
+                <button type="button" class="filter-button" data-filter="Non Coffee" aria-pressed="false">Non Coffee</button>
+                <button type="button" class="filter-button" data-filter="Makanan" aria-pressed="false">Makanan</button>
+                <!-- Kategori belum punya produk: dipakai untuk menguji empty state -->
+                <button type="button" class="filter-button" data-filter="Merchandise" aria-pressed="false">Merchandise</button>
             </div>
             <div id="produk-dinamis" class="js-product-grid"></div>
         </section>
